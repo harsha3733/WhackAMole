@@ -1,0 +1,65 @@
+body {
+  background-color: #111;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.game-container {
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-gap: 15px;
+  margin: 30px auto;
+}
+
+.hole {
+  width: 100px;
+  height: 100px;
+  background-color: #444;
+  border-radius: 10px;
+  position: relative;
+  cursor: pointer;
+}
+
+.hole.active-mole::before {
+  content: "🐹";
+  position: absolute;
+  font-size: 48px;
+  top: 20px;
+  left: 20px;
+}
+
+.hole.active-bomb::before {
+  content: "💣";
+  position: absolute;
+  font-size: 48px;
+  top: 20px;
+  left: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #555;
+  border: none;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #777;
+}
+
+.scoreboard {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+}
